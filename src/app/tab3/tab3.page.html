@@ -1,0 +1,32 @@
+<app-encabezado titulo="Asignaturas" icono="layers-outline"></app-encabezado>
+
+<ion-content>
+  <ion-list *ngFor="let data of dataTest">
+    <ion-item class="asignatura animate__animated animate__backInLeft"  id="{{data.idAsignatura}}" routerLink="/{{data.idAsignatura}}">
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      <ion-avatar slot="start">
+        <img src="{{ data.urlAsignatura }}" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ data.nameAsignatura }}</h2>
+        <p>{{ data.idAsignatura }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!--
+    <ion-list *ngFor="let data of asignatura ">
+       (click)="onClick(this.listA.dataId(data.idAsignatura))"
+    <ion-item (click)="open_modal()" class="animate__animated animate__backInLeft" (click)="dataId(data.idAsignatura)">
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      <ion-avatar slot="start">
+        <img src="{{ data.urlAsignatura }}" />
+      </ion-avatar>
+      <ion-label >
+        <h2>{{data.nameAsignatura}}</h2>
+        <p>{{data.idAsignatura}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-list>
+-->

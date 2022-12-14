@@ -1,0 +1,29 @@
+{
+	"Asignaturas": [
+		{"idAsignatura": "1",
+		"nameAsignatura": "Programacion de base de datos",
+		"urlAsignatura": "../assets/apis/media/programing.jpg",
+		"asistenica": []
+		},
+		{"idAsignatura": "2",
+		"nameAsignatura": "Desarrollo de aplicaciones moviles",
+		"urlAsignatura": "../assets/apis/media/database-1.jpg",
+		"asistenica": []
+		},
+		{"idAsignatura": "3",
+		"nameAsignatura": "Calidad de software",
+		"urlAsignatura": "../assets/apis/media/calidad_software.jpg",
+		"asistenica": []
+		},
+		{"idAsignatura": "4",
+		"nameAsignatura": "Religion",
+		"urlAsignatura": "../assets/apis/media/religion.jpg",
+		"asistenica": []
+		},
+		{"idAsignatura": "5",
+		"nameAsignatura": "Proceso de portafolio",
+		"urlAsignatura": "../assets/apis/media/portafolio.jpg",
+		"asistenica": []
+		}
+	]
+}

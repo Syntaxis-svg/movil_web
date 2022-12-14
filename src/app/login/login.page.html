@@ -1,0 +1,43 @@
+
+<app-encabezado titulo="Login" icono="person-outline"></app-encabezado>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize ion-text-center">iniciar sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input required type="text" name="nombre" [(ngModel)]="usuario.username" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input required type="password" name="pass" [(ngModel)]="usuario.password" ></ion-input>
+        </ion-item>
+        <ion-button expand="full" color="primary"
+          type="submit" [disabled]="form.invalid" class="ion-margin-top">
+          Iniciar Sesion
+        </ion-button>
+      </form>
+      <ion-button expand="block" fill="clear" shape="round" routerLink="/registro" >
+          Registrarse
+      </ion-button>
+      <ion-button expand="block" fill="clear" shape="round" routerLink="/restablecer">
+          Reestablecer
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-img src="assets/img/appStore.png"></ion-img>
+      </ion-col>
+      <ion-col size="6">
+        <ion-img src="assets/img/playStore.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

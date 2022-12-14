@@ -1,0 +1,7 @@
+{
+  "name": "vivo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

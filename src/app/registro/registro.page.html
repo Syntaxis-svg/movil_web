@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atras" mode="ios" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrarse</ion-title>
+    <ion-icon slot="end"  name="accessibility-outline" class="ion-padding"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize ion-text-center">Registrarse</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form #registro="ngForm" (ngSubmit)="onSubmit()" >
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input  name="correo" [(ngModel)]="usuario.correo" required clearInput=""></ion-input>          
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input  name="username" [(ngModel)]="usuario.username" required clearInput=""></ion-input>          
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" name="password" [(ngModel)]="usuario.password" required clearInput=""></ion-input>          
+        </ion-item>
+
+        <ion-button expand="block" class="ion-margin-top" type="submit" [disabled]="registro.invalid">
+          Registrarse
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

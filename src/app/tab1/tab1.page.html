@@ -1,0 +1,28 @@
+<app-encabezado titulo="QR" icono="qr-code-outline"></app-encabezado>
+
+<ion-content [style.visibility]="content_visibility">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize ion-text-center">
+        Escanear codigo QR
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-grid fixed>
+          <ion-col size="6">
+            <ion-text class="ion-text-justify ion-padding">
+              <p>Escanea el codigo qr que ha dejado tu profesor y automaticamente quedara registrada la asistencia de tu clase</p>
+            </ion-text>
+            <ion-img src="assets/img/qr.png"></ion-img>
+          </ion-col>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+    <ion-button (click)="startScan()" expand="full">
+      Escanear qr
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+</ion-content>
+

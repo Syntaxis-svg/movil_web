@@ -1,0 +1,38 @@
+<app-encabezado titulo="" icono=""></app-encabezado>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atras" mode="ios" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reestablecer Contraseña</ion-title>
+    <ion-icon slot="end"  name="key-outline" class="ion-padding"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize ion-text-center">Recuperar Contraseña</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- <form #recuperar="ngForm" (ngSubmit)="onSubmit()" > -->
+      <form #form="ngForm" (ngSubmit)="onSubmit()" >
+        <!-- <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" name="correo" [(ngModel)]="usuario.correo" required clearInput=""></ion-input>
+        </ion-item> -->
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" name="nombre" [(ngModel)]="usuario.username" required clearInput=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nueva Contraseña</ion-label>
+          <ion-input type="text" name="contraseña" [(ngModel)]="nuevapassword.password" required clearInput=""></ion-input>
+        </ion-item>
+        <ion-button (click)="cambiar(usuario.username)"expand="block" class="ion-margin-top" type="submit" [disabled]="form.invalid">
+          Cambiar Contraseña
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

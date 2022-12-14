@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title
+    class="ion-text-capitalize ion-text-center">Portafolio IV</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="asistencia.length === 0">
+    <ion-text
+      class="ion-text-center ion-justify-content-center ion-text-capitalize"
+      color="medium"
+    >
+      <h3>Sin asistencia registrada!</h3>
+    </ion-text>
+  </div>
+  <div>
+    <ion-list *ngFor="let item of asistencia">
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="8">{{item.fecha.getDate()}}/{{item.fecha.getMonth()+1}}/{{item.fecha.getFullYear()}}</ion-col>
+            <ion-col size="4" *ngIf="item.estado === true">Presente</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
